@@ -1,22 +1,22 @@
 version: '3'
 services:
   db:
-    image: mysql:5.7
+    image: mariadb:10
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: secret
     ports:
       - '3306:3306'
     volumes:
-      - '~/Sites/docker/mysql/mysql_bdd:/var/lib/mysql'
-      - '~/Sites/docker/mysql/mysql_conf:/etc/mysql/conf.d'
-  nginx:
-    build: ./nginx
-    ports: 
-      - "8080:80"
-    volumes: 
-      - ./code:/code
-  php: 
-    build: ./php
-    volumes: 
-      - ./code:/code
+      - '~/dev-envrionnement/docker/mysql/mysql_bdd:/var/lib/mysql'
+      - '~/dev-envrionnement/docker/mysql/mysql_conf:/etc/mysql/conf.d'
+  #nginx:
+  #  build: ./nginx
+  #  ports:
+  #    - "8080:80"
+  #  volumes:
+  #    - ./code:/code
+  #php:
+  #  build: ./php
+  #  volumes:
+  #    - ./code:/code
     
