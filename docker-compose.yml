@@ -1,7 +1,7 @@
 version: '3'
 services:
   db:
-    image: mariadb:10
+    image: 'mariadb:10'
     environment:
       MYSQL_ROOT_PASSWORD: secret
     ports:
@@ -9,14 +9,3 @@ services:
     volumes:
       - '~/dev-envrionnement/docker/mysql/mysql_bdd:/var/lib/mysql'
       - '~/dev-envrionnement/docker/mysql/mysql_conf:/etc/mysql/conf.d'
-  #nginx:
-  #  build: ./nginx
-  #  ports:
-  #    - "8080:80"
-  #  volumes:
-  #    - ./code:/code
-  #php:
-  #  build: ./php
-  #  volumes:
-  #    - ./code:/code
-    
