@@ -9,3 +9,8 @@ services:
     volumes:
       - '~/dev-envrionnement/docker/mysql/mysql_bdd:/var/lib/mysql'
       - '~/dev-envrionnement/docker/mysql/mysql_conf:/etc/mysql/conf.d'
+  maildev:
+    image : "djfarrelly/maildev"
+    ports:
+      - '1080:80'
+      - '1025:25'
