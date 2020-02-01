@@ -10,11 +10,11 @@ services:
       - '~/dev-envrionnement/docker/mysql/mysql_bdd:/var/lib/mysql'
       - '~/dev-envrionnement/docker/mysql/mysql_conf:/etc/mysql/conf.d'
   maildev:
-    image: 'mailhog/mailhog'
+    image: mailhog/mailhog
     ports:
       - '1025:1025'
       - '1080:8025'
-    #image : "djfarrelly/maildev"
-    #ports:
-     # - '1080:80'
-     # - '1025:25'
+  redis:
+    image: redis
+    ports:
+      - '6379:6379'
